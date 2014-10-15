@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 
 		webView.loadUrl("file:///android_asset/index.html");
 
-		webView.addJavascriptInterface(new WebViewInterface(), "flexin");
+		webView.addJavascriptInterface(new WebViewInterface(), "webcall");
 
 		settings = webView.getSettings();
 		settings.setJavaScriptEnabled(true);
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 		nextButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				webView.loadUrl("javascript:flexin.textValue(buttonPress())");
+				webView.loadUrl("javascript:webcall.textValue(buttonPress())");
 			}
 		});
 
